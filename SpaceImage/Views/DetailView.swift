@@ -9,10 +9,9 @@ import SwiftUI
 
 struct DetailView: View {
     var image: String
-    @State var scale: CGFloat = 1.0
-    
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    @State var scale: CGFloat? = 1.0
+    @Binding var isFullScreen : Bool
+        
     var body: some View {
         ZStack {
             Color.black
@@ -20,45 +19,40 @@ struct DetailView: View {
             
             VStack {
                 HStack{
-                    
                     Button(action: {
-                        self.presentationMode.wrappedValue.dismiss()
+                        isFullScreen.toggle()
                     }, label: {
                         Image(systemName: "chevron.left")
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                             .frame(width: 50, height: 50)
                     })
-                    
                     Spacer()
                 }
                 Spacer()
             }
             
-            VStack {
-                Spacer()
+            VStack(alignment: .center) {
                 Image(image)
                     .resizable()
-                    //.aspectRatio(contentMode: .fit)
                     .scaledToFit()
-                    .scaleEffect(scale)
+                    .scaleEffect(scale!)
                     .gesture(MagnificationGesture()
                                 .onChanged{ value in
                                     scale = value.magnitude })
                     .animation(.easeInOut)
-                
-                Spacer()
             }
-                
         }
-        .navigationBarHidden(true)
     }
 }
+
+//struct DetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DetailView(image: "image", isFullScreen: false )
+//    }
+//}
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(image: "image")
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
     }
 }
-
-
-//UIScreen.main.bounds.width

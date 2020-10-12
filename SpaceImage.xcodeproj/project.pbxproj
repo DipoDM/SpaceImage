@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E0727BF252E744900FE964D /* SpaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0727BE252E744900FE964D /* SpaceData.swift */; };
+		5E9159D0253410E700FB18C0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9159CF253410E700FB18C0 /* NetworkManager.swift */; };
 		5EC6B5FD252E5469004A1EE5 /* SpaceImageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6B5FC252E5469004A1EE5 /* SpaceImageApp.swift */; };
 		5EC6B5FF252E5469004A1EE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6B5FE252E5469004A1EE5 /* ContentView.swift */; };
 		5EC6B601252E546B004A1EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC6B600252E546B004A1EE5 /* Assets.xcassets */; };
 		5EC6B604252E546B004A1EE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EC6B603252E546B004A1EE5 /* Preview Assets.xcassets */; };
-		5EC6B60D252E54BF004A1EE5 /* NetworkData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6B60C252E54BF004A1EE5 /* NetworkData.swift */; };
-		5EC6B610252E54D7004A1EE5 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6B60F252E54D7004A1EE5 /* DataModel.swift */; };
 		5EC6B615252E58C2004A1EE5 /* DummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6B614252E58C2004A1EE5 /* DummyData.swift */; };
 		5EC6B618252E5ADF004A1EE5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC6B617252E5ADF004A1EE5 /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E0727BE252E744900FE964D /* SpaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceData.swift; sourceTree = "<group>"; };
+		5E9159CF253410E700FB18C0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5EC6B5F9252E5469004A1EE5 /* SpaceImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EC6B5FC252E5469004A1EE5 /* SpaceImageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceImageApp.swift; sourceTree = "<group>"; };
 		5EC6B5FE252E5469004A1EE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5EC6B600252E546B004A1EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EC6B603252E546B004A1EE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EC6B605252E546B004A1EE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5EC6B60C252E54BF004A1EE5 /* NetworkData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkData.swift; sourceTree = "<group>"; };
-		5EC6B60F252E54D7004A1EE5 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		5EC6B614252E58C2004A1EE5 /* DummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyData.swift; sourceTree = "<group>"; };
 		5EC6B617252E5ADF004A1EE5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -41,6 +41,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E9159D225341B0E00FB18C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E9159CF253410E700FB18C0 /* NetworkManager.swift */,
+				5E0727BE252E744900FE964D /* SpaceData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E9159D42534240600FB18C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5EC6B5FE252E5469004A1EE5 /* ContentView.swift */,
+				5EC6B617252E5ADF004A1EE5 /* DetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		5EC6B5F0252E5468004A1EE5 = {
 			isa = PBXGroup;
 			children = (
@@ -61,13 +79,11 @@
 			isa = PBXGroup;
 			children = (
 				5EC6B5FC252E5469004A1EE5 /* SpaceImageApp.swift */,
-				5EC6B5FE252E5469004A1EE5 /* ContentView.swift */,
-				5EC6B617252E5ADF004A1EE5 /* DetailView.swift */,
+				5E9159D42534240600FB18C0 /* Views */,
 				5EC6B600252E546B004A1EE5 /* Assets.xcassets */,
 				5EC6B605252E546B004A1EE5 /* Info.plist */,
 				5EC6B602252E546B004A1EE5 /* Preview Content */,
-				5EC6B60C252E54BF004A1EE5 /* NetworkData.swift */,
-				5EC6B60F252E54D7004A1EE5 /* DataModel.swift */,
+				5E9159D225341B0E00FB18C0 /* Model */,
 				5EC6B614252E58C2004A1EE5 /* DummyData.swift */,
 			);
 			path = SpaceImage;
@@ -150,9 +166,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EC6B60D252E54BF004A1EE5 /* NetworkData.swift in Sources */,
+				5E0727BF252E744900FE964D /* SpaceData.swift in Sources */,
 				5EC6B618252E5ADF004A1EE5 /* DetailView.swift in Sources */,
-				5EC6B610252E54D7004A1EE5 /* DataModel.swift in Sources */,
+				5E9159D0253410E700FB18C0 /* NetworkManager.swift in Sources */,
 				5EC6B5FF252E5469004A1EE5 /* ContentView.swift in Sources */,
 				5EC6B615252E58C2004A1EE5 /* DummyData.swift in Sources */,
 				5EC6B5FD252E5469004A1EE5 /* SpaceImageApp.swift in Sources */,
